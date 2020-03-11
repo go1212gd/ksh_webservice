@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradel
+.idea
+
+# Project exclude paths
+/.gradle/
