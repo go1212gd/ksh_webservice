@@ -1,4 +1,5 @@
 package com.kshpart.www.springboot.domain.posts;
+
 import com.kshpart.www.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 
 @Getter
 @NoArgsConstructor // 롬복,
@@ -24,7 +24,6 @@ public class Posts extends BaseTimeEntity {
 
     @Column(columnDefinition = "TEXT", nullable=false)
     private String content;
-
     private String author;
 
     @Builder
