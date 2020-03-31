@@ -1,22 +1,25 @@
-language: java
-jdk:
+ language: java
+ jdk:
   - openjdk8
 
-branches:
+ branches:
   only:
     - master
 
 #Trivis CI 서버의 Home
-cache:
+ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew clean build"
+ before_install:
+    - chmod +x gradlew
+
+   script: "./gradlew clean build"
 
 # CI 실행 완료 시 메일로 알람
-notifications:
- email:
-   recipients:
-     - go1212gd@naver.com
-     - kshpart@gmail.com
+ notifications:
+  email:
+    recipients:
+      - go1212gd@naver.com
+      - kshpart@gmail.com
