@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                     .authorizeRequests()//URL별 권한관리를 설정하는 옵션 시작점. 이게 있어야 antMatchers 사용 가능.
-                    .antMatchers("/", "/css/**", "/images/**","/js/**","/h2-console/**").permitAll()
+                    .antMatchers("/", "/css/**", "/images/**","/js/**","/h2-console/**","/profile").permitAll()
                     .antMatchers("/api/v1/**").hasRole(Role.USER.name())// 권한관리 대상 지정 옵션.
                     .anyRequest().authenticated() // 설정값 이외의 나머지 URL들을 나타냄.
 
