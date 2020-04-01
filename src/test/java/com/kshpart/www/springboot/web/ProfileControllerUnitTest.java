@@ -52,5 +52,4 @@ public class ProfileControllerUnitTest {
         //then
         assertThat(profile).isEqualTo(expectedProfile);
     }
-
 }
