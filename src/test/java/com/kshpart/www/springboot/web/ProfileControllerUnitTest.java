@@ -34,6 +34,7 @@ public class ProfileControllerUnitTest {
         env.addActiveProfile("real-db");
 
         ProfileController controller = new ProfileController(env);
+
         //when
         String profile = controller.profile();
 
@@ -47,8 +48,10 @@ public class ProfileControllerUnitTest {
         String expectedProfile = "default";
         MockEnvironment env = new MockEnvironment();
         ProfileController controller = new ProfileController(env);
+
         //when
         String profile = controller.profile();
+
         //then
         assertThat(profile).isEqualTo(expectedProfile);
     }
