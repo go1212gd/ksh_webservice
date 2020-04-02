@@ -2,9 +2,7 @@
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
-# shellcheck disable=SC1090
 source ${ABSDIR}/profile.sh
-# shellcheck disable=SC1090
 source ${ABSDIR}/switch.sh
 
 IDLE_PORT=$(find_idle_port)
@@ -32,5 +30,3 @@ do
   echo "> Health Check 연결 실패. 재시도..."
   sleep 10
 done
-
-

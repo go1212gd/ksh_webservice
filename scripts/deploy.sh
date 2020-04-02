@@ -1,6 +1,6 @@
 #! /bin/bash
+
 REPOSITORY=/home/ec2-user/app/step2
-# shellcheck disable=SC2034
 PROJECT_NAME=kshpart_webservice
 
 echo "> Build 파일 복사"
@@ -20,7 +20,6 @@ else
 fi
 
 echo "> 새 애플리케이션 배포"
-# shellcheck disable=SC2012
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 
 echo "> JAR_NAME: $JAR_NAME"
