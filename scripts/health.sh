@@ -2,7 +2,9 @@
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
+# shellcheck disable=SC1090
 source ${ABSDIR}/profile.sh
+# shellcheck disable=SC1090
 source ${ABSDIR}/switch.sh
 
 IDLE_PORT=$(find_idle_port)
